@@ -1,0 +1,12 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["/assets/*", "/css/*", "/js/*"]
+  },
+  "routes": [
+    { "route": "/blog/*", "rewrite": "/blog.html" }
+  ],
+  "responseOverrides": {
+    "404": { "rewrite": "/index.html" }
+  }
+}

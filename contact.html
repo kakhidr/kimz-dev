@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — KiMZ</title>
+  <meta name="description" content="Get in touch with KiMZ for training inquiries, consulting, or collaboration.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Ki<span class="brand-dot">M</span>Z<span class="brand-dot">.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="courses.html" data-page="courses.html" data-i18n="nav.courses">Courses</a></li>
+      <li><a href="workshop.html" data-page="workshop.html" data-i18n="nav.workshop">Workshop</a></li>
+      <li><a href="blog.html" data-page="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="about.html" data-page="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-page="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLanguage()">عربي</button></li>
+    </ul>
+    <button class="nav-mobile-btn" onclick="toggleMobileNav()">☰</button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero" style="padding-bottom: 40px;">
+  <div class="container">
+    <h1 data-i18n="contact.title">Get In Touch</h1>
+    <p class="subtitle" data-i18n="contact.subtitle">Interested in training, collaboration, or consulting? Let's talk.</p>
+  </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="contact-grid">
+
+      <!-- Form -->
+      <div class="fade-in">
+        <form id="contact-form">
+          <div class="form-group">
+            <label data-i18n="contact.name">Name</label>
+            <input type="text" name="name" required placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact.email">Email</label>
+            <input type="email" name="email" required placeholder="your@email.com">
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact.subject">Subject</label>
+            <select name="subject">
+              <option value="Course Inquiry">Course Inquiry</option>
+              <option value="Corporate Training">Corporate Training</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Collaboration">Collaboration</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label data-i18n="contact.message">Message</label>
+            <textarea name="message" required placeholder="Tell me what you're looking for..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center;" data-i18n="contact.send">Send Message</button>
+        </form>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="fade-in">
+        <div class="card" style="margin-bottom: 16px;">
+          <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 16px;">Direct Contact</h3>
+          <div style="display: flex; flex-direction: column; gap: 12px;">
+            <a href="mailto:kkhidr@gmail.com" style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+              <span style="font-size: 18px;">✉️</span> kkhidr@gmail.com
+            </a>
+            <a href="https://linkedin.com/in/karim-khidr-39a57123" target="_blank" style="display: flex; align-items: center; gap: 10px; font-size: 14px;">
+              <span style="font-size: 18px;">🔗</span> LinkedIn
+            </a>
+            <p style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-muted);">
+              <span style="font-size: 18px;">📍</span> Dublin, Ireland
+            </p>
+          </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 16px;">
+          <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 12px;">I can help with</h3>
+          <ul style="list-style: none; font-size: 13px; color: var(--text-muted);">
+            <li style="margin-bottom: 8px; display: flex; gap: 8px;">
+              <span style="color: var(--gold);">✦</span> AI & Automation training for teams
+            </li>
+            <li style="margin-bottom: 8px; display: flex; gap: 8px;">
+              <span style="color: var(--gold);">✦</span> Cybersecurity workshops & assessments
+            </li>
+            <li style="margin-bottom: 8px; display: flex; gap: 8px;">
+              <span style="color: var(--gold);">✦</span> Cloud operations consulting
+            </li>
+            <li style="margin-bottom: 8px; display: flex; gap: 8px;">
+              <span style="color: var(--gold);">✦</span> Technology advisory
+            </li>
+            <li style="display: flex; gap: 8px;">
+              <span style="color: var(--gold);">✦</span> Speaking engagements
+            </li>
+          </ul>
+        </div>
+
+        <div class="card" style="border-color: var(--gold);">
+          <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px; color: var(--gold);">Response Time</h3>
+          <p style="font-size: 13px; color: var(--text-muted);">I typically respond within 24–48 hours. For urgent training inquiries, mention it in the subject.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">Ki<span class="gold">M</span>Z<span class="gold">.</span>dev</div>
+    <p data-i18n="footer.tagline" style="color: var(--gold); font-family: var(--font-ar); font-size: 14px;">مساحة للتجربة والتعلّم</p>
+    <div class="footer-links">
+      <a href="https://youtube.com/@warshetkimz" target="_blank">YouTube</a>
+      <a href="https://instagram.com/warshetkimz" target="_blank">Instagram</a>
+      <a href="https://linkedin.com/in/karim-khidr-39a57123" target="_blank">LinkedIn</a>
+      <a href="mailto:kkhidr@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.copy">© 2026 KiMZ. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
