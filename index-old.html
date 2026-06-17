@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KiMZ — AI & Cybersecurity Training</title>
+  <meta name="description" content="Practical training in AI, Cybersecurity, and Automation by Karim Khidr (KiMZ). Hands-on courses for professionals.">
+  <meta property="og:title" content="KiMZ — AI & Cybersecurity Training">
+  <meta property="og:description" content="Practical training in AI, Cybersecurity, and Automation. Learn. Build. Secure.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand">Ki<span class="brand-dot">M</span>Z<span class="brand-dot">.</span>dev</a>
+    <ul class="nav-links">
+      <li><a href="index.html" data-page="index.html" data-i18n="nav.home">Home</a></li>
+      <li><a href="courses.html" data-page="courses.html" data-i18n="nav.courses">Courses</a></li>
+      <li><a href="workshop.html" data-page="workshop.html" data-i18n="nav.workshop">Workshop</a></li>
+      <li><a href="blog.html" data-page="blog.html" data-i18n="nav.blog">Blog</a></li>
+      <li><a href="about.html" data-page="about.html" data-i18n="nav.about">About</a></li>
+      <li><a href="contact.html" data-page="contact.html" data-i18n="nav.contact">Contact</a></li>
+      <li><button class="lang-toggle" onclick="toggleLanguage()">عربي</button></li>
+    </ul>
+    <button class="nav-mobile-btn" onclick="toggleMobileNav()">☰</button>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge" data-i18n="hero.badge">🚀 AI & Cybersecurity Training</div>
+    <h1 data-i18n="hero.title">Learn. Build. <span class="gold">Secure.</span></h1>
+    <p class="arabic-tagline" data-i18n="hero.tagline">ورشة كيمز — مساحة للتجربة والتعلّم</p>
+    <p class="subtitle" data-i18n="hero.subtitle">Practical training in AI, Cybersecurity, and Automation — designed for professionals who want to build real skills, not just watch tutorials.</p>
+    <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+      <a href="courses.html" class="btn btn-primary" data-i18n="hero.cta_courses">Explore Courses</a>
+      <a href="https://youtube.com/@warshetkimz" target="_blank" class="btn btn-outline" data-i18n="hero.cta_youtube">Watch on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- Trust / Stats -->
+<section class="section">
+  <div class="container">
+    <div class="trust-row fade-in">
+      <div class="trust-item">
+        <div class="trust-value">20+</div>
+        <div class="trust-label">Years in Tech</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-value">MSc</div>
+        <div class="trust-label">Cybersecurity (1st Class)</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-value">7+</div>
+        <div class="trust-label">Years at Microsoft</div>
+      </div>
+      <div class="trust-item">
+        <div class="trust-value">AI</div>
+        <div class="trust-label">& Automation Expert</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Courses Preview -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2>Featured Courses</h2>
+      <div class="accent-line"></div>
+      <p>Hands-on training built from real-world experience</p>
+    </div>
+
+    <div class="courses-grid">
+      <div class="card course-card fade-in">
+        <span class="course-badge">Coming Soon</span>
+        <h3>AI-Powered Automation</h3>
+        <p class="course-desc">Build intelligent workflows using AI agents, Power Automate, and LLMs. From zero to production-ready automation that saves hours every week.</p>
+        <div class="course-meta">
+          <span>📐 8 Modules</span>
+          <span>⏱ Self-paced</span>
+          <span>🎯 Intermediate</span>
+        </div>
+        <a href="courses.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Learn More</a>
+      </div>
+
+      <div class="card course-card fade-in">
+        <span class="course-badge">Coming Soon</span>
+        <h3>Cybersecurity Fundamentals</h3>
+        <p class="course-desc">Penetration testing, incident response, and security architecture. Practical labs and real scenarios from enterprise environments.</p>
+        <div class="course-meta">
+          <span>📐 10 Modules</span>
+          <span>⏱ Self-paced</span>
+          <span>🎯 Beginner → Advanced</span>
+        </div>
+        <a href="courses.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Learn More</a>
+      </div>
+
+      <div class="card course-card fade-in">
+        <span class="course-badge">Coming Soon</span>
+        <h3>AI for Cybersecurity</h3>
+        <p class="course-desc">Where AI meets security — threat detection with ML, LLM-assisted triage, automated security assessments, and adversarial AI understanding.</p>
+        <div class="course-meta">
+          <span>📐 6 Modules</span>
+          <span>⏱ Self-paced</span>
+          <span>🎯 Advanced</span>
+        </div>
+        <a href="courses.html" class="btn btn-outline" style="width: 100%; justify-content: center;">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- YouTube Preview -->
+<section class="section" style="background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2>ورشة كيمز — Workshop</h2>
+      <div class="accent-line"></div>
+      <p>Experiments, tutorials, and behind-the-scenes builds</p>
+    </div>
+    <div style="text-align: center;" class="fade-in">
+      <p style="font-size: 48px; margin-bottom: 16px;">🎬</p>
+      <p style="color: var(--text-muted); font-size: 15px; margin-bottom: 24px;">YouTube channel launching soon. Subscribe to be first to know!</p>
+      <a href="https://youtube.com/@warshetkimz" target="_blank" class="btn btn-primary">Subscribe on YouTube</a>
+    </div>
+  </div>
+</section>
+
+<!-- Why KiMZ -->
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-in">
+      <h2>Why Learn with KiMZ?</h2>
+      <div class="accent-line"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+      <div class="card fade-in">
+        <p style="font-size: 28px; margin-bottom: 12px;">🏗️</p>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Built from Production</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Not theoretical — every course comes from real systems I've built, broken, and fixed in enterprise environments.</p>
+      </div>
+      <div class="card fade-in">
+        <p style="font-size: 28px; margin-bottom: 12px;">🤖</p>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">AI-Native Approach</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Learn how to leverage AI as a multiplier — from Copilot to agentic workflows to LLM-assisted security operations.</p>
+      </div>
+      <div class="card fade-in">
+        <p style="font-size: 28px; margin-bottom: 12px;">🎯</p>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Practical First</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Every module has hands-on labs. You'll build something real — not just pass a quiz.</p>
+      </div>
+      <div class="card fade-in">
+        <p style="font-size: 28px; margin-bottom: 12px;">🌍</p>
+        <h3 style="font-size: 16px; font-weight: 600; margin-bottom: 8px;">Bilingual Content</h3>
+        <p style="font-size: 13px; color: var(--text-muted);">Available in English and Arabic — because great education shouldn't be limited by language.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" style="text-align: center;">
+  <div class="container fade-in">
+    <h2 style="font-size: 28px; font-weight: 800; margin-bottom: 12px;">Ready to level up?</h2>
+    <p style="color: var(--text-muted); margin-bottom: 24px;">Join the waitlist and get early access to courses + exclusive content.</p>
+    <a href="contact.html" class="btn btn-primary">Get In Touch</a>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-brand">Ki<span class="gold">M</span>Z<span class="gold">.</span>dev</div>
+    <p data-i18n="footer.tagline" style="color: var(--gold); font-family: var(--font-ar); font-size: 14px;">مساحة للتجربة والتعلّم</p>
+    <div class="footer-links">
+      <a href="https://youtube.com/@warshetkimz" target="_blank">YouTube</a>
+      <a href="https://instagram.com/warshetkimz" target="_blank">Instagram</a>
+      <a href="https://linkedin.com/in/karim-khidr-39a57123" target="_blank">LinkedIn</a>
+      <a href="mailto:kkhidr@gmail.com">Email</a>
+    </div>
+    <p class="footer-copy" data-i18n="footer.copy">© 2026 KiMZ. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
