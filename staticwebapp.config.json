@@ -1,7 +1,11 @@
 {
   "navigationFallback": {
-    "rewrite": "/index.html",
+    "rewrite": "/404.html",
     "exclude": [
+      "/index.html",
+      "/blog.html",
+      "/privacy.html",
+      "/404.html",
       "/assets/*",
       "/css/*",
       "/js/*",
@@ -9,12 +13,12 @@
       "/*.ico",
       "/*.png",
       "/*.webp",
-      "/blog.html",
-      "/privacy.html",
-      "/404.html",
       "/robots.txt",
       "/sitemap.xml",
-      "/site.webmanifest"
+      "/site.webmanifest",
+      "/CHANGELOG.md",
+      "/PROMPT.md",
+      "/README.md"
     ]
   },
   "globalHeaders": {
