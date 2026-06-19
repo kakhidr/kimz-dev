@@ -28,7 +28,7 @@ Build me a single-page portfolio and training website with the following specifi
 - **Fonts:** Poppins (English), Cairo (Arabic) — loaded via `<link>` in `<head>`, NOT `@import`
 - **Style:** Premium, minimal, cinematic, dark theme, creator-focused
 - **Icons:** Custom inline SVG only — no emoji, no icon fonts
-- **No frameworks:** Pure HTML/CSS/JS, zero dependencies
+- **No frameworks:** No JavaScript frameworks or build dependencies (Google Fonts is an external runtime dependency loaded via CDN)
 
 ### Sections (single-page, scroll-based navigation)
 
@@ -181,10 +181,23 @@ Build me a single-page portfolio and training website with the following specifi
 - No emoji as icons (use SVG)
 - No fabricated content — use placeholders where user hasn't provided material
 - Employer disclaimer in footer: "Views expressed are personal..."
-- Keep accessibility: alt tags, aria-labels, semantic HTML
+- Accessibility: designed toward WCAG 2.1/2.2 AA principles, subject to automated and manual testing
 - Responsive: mobile-first with breakpoints at 768px, 992px, 1200px
 - Colorlib attribution required in footer (CC BY 3.0)
 - All external links must have `rel="noopener noreferrer"`
+
+### Content Placeholder Policy
+
+Courses, projects, case studies and blog articles are intentionally placeholders
+until reviewed and approved by the site owner. AI coding assistants must not
+invent or publish missing content.
+
+### Owner Validation Notes
+
+- TODO(owner): Confirm whether Senior Service Engineer began in 2023 or 2024 (currently set to 2024).
+- Review and approve course content before publication.
+- Review and approve project case studies before publication.
+- Review and approve blog articles before publication.
 
 ---
 

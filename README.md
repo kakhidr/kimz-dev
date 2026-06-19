@@ -10,13 +10,14 @@ A single-page portfolio and training website for **Karim Khidr (KiMZ)** — AI &
 
 | Layer | Technology |
 |-------|-----------|
-| **Frontend** | Pure HTML, CSS, JavaScript — zero frameworks |
+| **Frontend** | HTML, CSS, vanilla JavaScript — no frameworks, no required build step |
 | **Design** | Clark-inspired single-page layout (Colorlib, CC BY 3.0) |
 | **Hosting** | Azure Static Web Apps (Free tier) |
-| **Source** | GitHub (private repo) |
+| **Source** | GitHub (public repo) |
 | **Domain** | kimz.dev (planned) |
 | **i18n** | Bilingual EN/AR toggle (localStorage-persisted) |
 | **SEO** | Structured data (JSON-LD), Open Graph, Twitter Cards |
+| **External** | Google Fonts (runtime CDN dependency) |
 
 ## Features
 
@@ -111,16 +112,41 @@ python -m http.server 8000
 
 ## Accessibility
 
-The site implements progressive enhancement and follows WCAG 2.1 Level AA guidelines:
+The site is designed toward WCAG 2.1/2.2 AA principles. Automated checks and manual keyboard, screen-reader and contrast testing are required before claiming conformance.
 
-- Skip-to-content link for keyboard users
-- `:focus-visible` outlines on all interactive elements
-- `prefers-reduced-motion` disables animations and auto-rotation
-- ARIA attributes on mobile nav (`aria-expanded`, `aria-controls`, `aria-hidden`)
-- Escape key closes mobile menu
-- Hero slider pauses on hover/focus
+Current implementations:
+
+- Skip-to-content link (targets `<main id="main-content">`)
+- `:focus-visible` outlines on all interactive elements (2px amber)
+- `prefers-reduced-motion` disables all transitions/animations AND stops hero auto-rotation
+- Progressive enhancement — `.js` class on `<html>`, animations only apply when JS loads
+- Mobile nav SVG icons with `aria-expanded`, `aria-controls`, `aria-hidden`, Escape closes
+- Hero slider dots are `<button>` elements with `aria-label` and `aria-current`
+- Pause/play button for hero slider; stops permanently after direct dot interaction
+- Inactive slides use `visibility: hidden` and `pointer-events: none`
 - Visible form labels on all inputs
-- Semantic HTML structure with landmark regions
+- Semantic HTML — `<main>`, `<nav>`, `<section>`, `<footer>` landmark regions
+
+## Content Governance
+
+Courses, projects, case studies and blog articles remain placeholders until
+reviewed and approved by the site owner. Contributors and AI coding assistants
+must not invent or publish missing content. New content should be added only
+after factual, confidentiality and quality review.
+
+## Contact Form
+
+The contact form uses a `mailto:` handler — submitting opens the visitor's email client with a pre-composed message. No data is stored, transmitted to a backend, or processed server-side. A visible notice explains this behaviour to the user.
+
+Pathway links (Students, Universities, Organisations) preselect the appropriate enquiry type in the contact form via `data-enquiry` attributes.
+
+## Owner Validation Required
+
+- Confirm Senior Service Engineer start year: 2023 or 2024 (currently 2024).
+- Review and approve course content before publication.
+- Review and approve project case studies before publication.
+- Review and approve blog articles before publication.
+- Confirm any future analytics implementation and privacy wording.
 
 ## License & Credits
 

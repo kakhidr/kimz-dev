@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- build: kimz-dev-main -->
 <head>
+  <meta name="kimz-build" content="v2-maintenance">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Karim Khidr | AI & Cybersecurity Trainer in Ireland — KiMZ.Dev</title>
@@ -43,7 +45,7 @@
 <body>
 
 <!-- Skip to content -->
-<a href="#about" class="skip-link">Skip to main content</a>
+<a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- ═══ NAVBAR ═══ -->
 <nav class="navbar">
@@ -58,12 +60,13 @@
       <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
       <li><a href="#blog" data-i18n="nav.blog">Blog</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-      <li><button class="lang-btn" onclick="toggleLanguage()">عربي</button></li>
+      <li><button class="lang-btn" type="button" aria-label="Switch to Arabic">عربي</button></li>
     </ul>
-    <button class="nav-toggle" onclick="toggleMobileNav()" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">☰</button>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </nav>
 
+<main id="main-content">
 <!-- ═══ HERO SLIDER ═══ -->
 <section class="hero" id="home">
   <div class="hero-slider">
@@ -85,7 +88,7 @@
           </div>
           <div class="hero-img">
             <div class="hero-avatar-circle">
-              <img src="assets/img/optimized/avatar-night.webp" alt="Karim Khidr" loading="eager" width="400" height="400">
+              <img src="assets/img/optimized/avatar-night.webp" alt="Karim Khidr" loading="eager" fetchpriority="high" width="400" height="400">
             </div>
           </div>
         </div>
@@ -142,9 +145,10 @@
   </div>
 
   <div class="hero-dots">
-    <div class="hero-dot active" onclick="goToSlide(0)"></div>
-    <div class="hero-dot" onclick="goToSlide(1)"></div>
-    <div class="hero-dot" onclick="goToSlide(2)"></div>
+    <button class="hero-dot active" type="button" data-slide-index="0" aria-label="Show slide 1" aria-current="true"></button>
+    <button class="hero-dot" type="button" data-slide-index="1" aria-label="Show slide 2" aria-current="false"></button>
+    <button class="hero-dot" type="button" data-slide-index="2" aria-label="Show slide 3" aria-current="false"></button>
+    <button class="hero-pause" type="button" aria-label="Pause slider" aria-pressed="false"><svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><rect x="2" y="1" width="4" height="14"/><rect x="10" y="1" width="4" height="14"/></svg></button>
   </div>
 </section>
 
@@ -158,7 +162,7 @@
         </div>
         <h3 data-i18n="pathways.students_title">Students & Junior Professionals</h3>
         <p data-i18n="pathways.students_desc">Career-focused sessions, practical cybersecurity foundations and responsible use of AI as a learning assistant.</p>
-        <a href="#contact" class="btn btn-outline btn-sm" data-i18n="pathways.students_cta">Explore Student Training</a>
+        <a href="#contact" class="btn btn-outline btn-sm" data-i18n="pathways.students_cta" data-enquiry="Student Workshop">Explore Student Training</a>
       </div>
 
       <div class="pathway-card animate">
@@ -167,7 +171,7 @@
         </div>
         <h3 data-i18n="pathways.universities_title">Universities</h3>
         <p data-i18n="pathways.universities_desc">Guest lectures, 90-minute intensive sessions and applied programmes designed for computer science and cybersecurity students.</p>
-        <a href="#contact" class="btn btn-outline btn-sm" data-i18n="pathways.universities_cta">Request a University Session</a>
+        <a href="#contact" class="btn btn-outline btn-sm" data-i18n="pathways.universities_cta" data-enquiry="University Guest Lecture">Request a University Session</a>
       </div>
 
       <div class="pathway-card animate">
@@ -176,7 +180,7 @@
         </div>
         <h3 data-i18n="pathways.orgs_title">Organisations</h3>
         <p data-i18n="pathways.orgs_desc">Practical training and advisory sessions covering AI workflows, cybersecurity, cloud operations and technical service practices.</p>
-        <a href="#contact" class="btn btn-outline btn-sm" data-i18n="pathways.orgs_cta">Discuss Corporate Training</a>
+        <a href="#contact" class="btn btn-outline btn-sm" data-i18n="pathways.orgs_cta" data-enquiry="Corporate Training">Discuss Corporate Training</a>
       </div>
     </div>
   </div>
@@ -681,8 +685,8 @@
             <input type="text" id="contact-org" name="organisation" class="form-control" placeholder="Organisation or University" autocomplete="organization" data-i18n="contact.org">
           </div>
           <div class="form-group">
-            <label for="contact-subject" class="form-label" data-i18n="contact.subject_label">Enquiry Type</label>
-            <select id="contact-subject" name="subject" class="form-control">
+            <label for="enquiry-type" class="form-label" data-i18n="contact.subject_label">Enquiry Type</label>
+            <select id="enquiry-type" name="subject" class="form-control">
               <option value="University Guest Lecture">University Guest Lecture</option>
               <option value="Student Workshop">Student Workshop</option>
               <option value="Corporate Training">Corporate Training</option>
@@ -704,6 +708,7 @@
     </div>
   </div>
 </section>
+</main>
 
 <!-- ═══ FOOTER ═══ -->
 <footer class="footer">

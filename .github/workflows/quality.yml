@@ -1,0 +1,40 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint-and-validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install tools
+        run: npm install -g htmlhint eslint stylelint stylelint-config-standard
+
+      - name: HTML validation
+        run: npx htmlhint "*.html" --config '{"tagname-lowercase":true,"attr-lowercase":true,"attr-value-double-quotes":true,"doctype-first":true,"tag-pair":true,"spec-char-escape":false,"id-unique":true,"src-not-empty":true,"attr-no-duplication":true,"title-require":true}'
+
+      - name: JavaScript syntax check
+        run: npx eslint js/clark.js --no-eslintrc --rule '{"no-undef":"off","no-unused-vars":"off"}' --env browser,es2021 --parser-options=ecmaVersion:2021
+
+      - name: CSS lint
+        run: npx stylelint "css/**/*.css" --config '{"extends":"stylelint-config-standard","rules":{"no-descending-specificity":null,"color-function-notation":null,"alpha-value-notation":null,"selector-class-pattern":null,"custom-property-pattern":null,"declaration-block-no-redundant-longhand-properties":null,"shorthand-property-no-redundant-values":null,"property-no-vendor-prefix":null,"font-family-no-missing-generic-family-keyword":null}}'
+
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check internal links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --no-progress --offline "*.html"
+          fail: true
