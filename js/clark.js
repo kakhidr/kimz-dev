@@ -12,14 +12,14 @@ const translations = {
       { sub: 'Train with confidence', h1: "Learn. Build. <span class='highlight'>Secure.</span>", h2: 'Practical AI & Cybersecurity training from 20+ years of production experience', tagline: '', btn1: 'View Courses', btn2: 'About Me' },
       { sub: 'ورشة كيمز', h1: "The <span class='highlight'>Workshop</span>", h2: 'Tutorials, experiments, and behind-the-scenes builds on YouTube', tagline: 'مساحة للتجربة والتعلّم', btn1: 'Subscribe', btn2: 'Learn More' }
     ],
-    about: { heading: 'About Me', big: 'About', bio1: "I'm <strong>Karim Khidr</strong> — most people know me as <strong style='color:var(--gold)'>KiMZ</strong>. I'm a Senior Service Engineer at Microsoft with over 20 years of experience in technology, cloud operations, cybersecurity, and automation.", bio2: "I hold a <strong style='color:var(--gold)'>First Class Honours MSc in Cybersecurity</strong> (GPA 82) and have designed AI-powered workflows that eliminated 60–70% of manual incident noise. I started my career as a university instructor — and that passion for teaching never left.", counter_label: 'Years in Tech', btn: 'Contact Me' },
+    about: { heading: 'About Me', big: 'About', bio1: "I'm <strong>Karim Khidr</strong> — most people know me as <strong style='color:var(--gold)'>KiMZ</strong>. I'm a Senior Service Engineer at Microsoft with over 20 years of experience in technology, cloud operations, cybersecurity, and automation.", bio2: "I hold a <strong style='color:var(--gold)'>First Class Honours MSc in Cybersecurity</strong> (overall result: 82%) and have designed AI-assisted workflows that reduced repetitive manual triage and coordination effort by approximately 60–70% within the target process. I started my career as a university instructor — and that passion for teaching never left.", counter_label: 'Years in Tech', btn: 'Contact Me' },
     resume: { heading: 'Resume', big: 'Resume', desc: 'A career spanning university teaching, global telecom operations, and enterprise cloud engineering.' },
     courses: { heading: 'Courses', big: 'Courses', desc: 'Hands-on training built from real-world production experience' },
     skills: { heading: 'My Skills', big: 'Skills', desc: 'Core competencies developed across 20+ years of engineering and operations' },
     projects: { heading: 'Projects & Workshop', big: 'Projects', desc: 'Course previews, YouTube content, and experiments from Warshet KiMZ' },
     blog: { heading: 'Blog', big: 'Blog', desc: 'Thoughts on AI, security, automation, and the learning journey' },
-    contact: { heading: 'Contact', big: 'Contact', desc: "Interested in training, consulting, or collaboration? Let's talk.", name: 'Your Name', email: 'Your Email', subject: 'Subject', message: 'Message', send: 'Send Message', subjects: ['Course Inquiry', 'Corporate Training', 'Consulting', 'Collaboration', 'Other'] },
-    footer: { copy: '© 2026 KiMZ. All rights reserved.', credit: 'Design inspired by Colorlib' }
+    contact: { heading: 'Contact', big: 'Contact', desc: "Interested in training, consulting, or collaboration? Let's talk.", name: 'Your Name', email: 'Your Email', org: 'Organisation or University', subject: 'Enquiry Type', message: 'Message', send: 'Send Message', name_label: 'Name', email_label: 'Email', org_label: 'Organisation / University (optional)', subject_label: 'Enquiry Type', message_label: 'Message', mailto_notice: 'Submitting this form will open your email application with the message prepared. The website does not send or store the message directly.', subjects: ['University Guest Lecture', 'Student Workshop', 'Corporate Training', 'AI Automation Advisory', 'Cybersecurity Programme', 'Speaking Opportunity', 'Creator Collaboration', 'Other'] },
+    footer: { copy: '© 2026 KiMZ. All rights reserved.', credit: 'Design inspired by Colorlib', disclaimer: 'Views and content on this website are personal and do not represent or imply endorsement by current or former employers.' }
   },
   ar: {
     nav: { home: 'الرئيسية', about: 'عني', resume: 'السيرة', courses: 'الدورات', skills: 'المهارات', projects: 'المشاريع', blog: 'المدونة', contact: 'تواصل' },
@@ -28,14 +28,14 @@ const translations = {
       { sub: 'تدرّب بثقة', h1: "تعلّم. ابنِ. <span class='highlight'>أمِّن.</span>", h2: 'تدريب عملي في الذكاء الاصطناعي والأمن السيبراني من خبرة +٢٠ سنة', tagline: '', btn1: 'الدورات', btn2: 'عني' },
       { sub: 'ورشة كيمز', h1: "<span class='highlight'>الورشة</span>", h2: 'دروس، تجارب، وبناء مشاريع على يوتيوب', tagline: 'مساحة للتجربة والتعلّم', btn1: 'اشترك', btn2: 'اعرف أكتر' }
     ],
-    about: { heading: 'عني', big: 'عني', bio1: "أنا <strong>كريم خضر</strong> — معظم الناس يعرفوني بـ <strong style='color:var(--gold)'>كيمز</strong>. مهندس أول في مايكروسوفت وعندي أكتر من ٢٠ سنة خبرة في التكنولوجيا، العمليات السحابية، الأمن السيبراني، والأتمتة.", bio2: "حاصل على <strong style='color:var(--gold)'>ماجستير أمن سيبراني بمرتبة الشرف الأولى</strong> (GPA 82) وصممت أنظمة أتمتة بالذكاء الاصطناعي قللت العمل اليدوي بنسبة ٦٠-٧٠٪. بدأت مسيرتي كمدرس جامعي — وشغف التعليم ما سابني أبداً.", counter_label: 'سنة خبرة', btn: 'تواصل معي' },
+    about: { heading: 'عني', big: 'عني', bio1: "أنا <strong>كريم خضر</strong> — معظم الناس يعرفوني بـ <strong style='color:var(--gold)'>كيمز</strong>. مهندس أول في مايكروسوفت وعندي أكتر من ٢٠ سنة خبرة في التكنولوجيا، العمليات السحابية، الأمن السيبراني، والأتمتة.", bio2: "حاصل على <strong style='color:var(--gold)'>ماجستير أمن سيبراني بمرتبة الشرف الأولى</strong> (النتيجة الكلية: ٨٢٪) وصممت أنظمة مساعدة بالذكاء الاصطناعي قللت العمل اليدوي المتكرر في الفرز والتنسيق بنسبة ٦٠-٧٠٪ تقريباً. بدأت مسيرتي كمدرس جامعي — وشغف التعليم ما سابني أبداً.", counter_label: 'سنة خبرة', btn: 'تواصل معي' },
     resume: { heading: 'السيرة الذاتية', big: 'السيرة', desc: 'مسيرة مهنية تمتد من التدريس الجامعي إلى عمليات الاتصالات العالمية وهندسة السحابة.' },
     courses: { heading: 'الدورات', big: 'الدورات', desc: 'تدريب عملي مبني على خبرة حقيقية في بيئات الإنتاج' },
     skills: { heading: 'مهاراتي', big: 'المهارات', desc: 'كفاءات أساسية مبنية على أكتر من ٢٠ سنة في الهندسة والعمليات' },
     projects: { heading: 'المشاريع والورشة', big: 'المشاريع', desc: 'معاينات الدورات، محتوى يوتيوب، وتجارب من ورشة كيمز' },
     blog: { heading: 'المدونة', big: 'المدونة', desc: 'أفكار عن الذكاء الاصطناعي، الأمان، الأتمتة، ورحلة التعلّم' },
-    contact: { heading: 'تواصل معي', big: 'تواصل', desc: 'مهتم بالتدريب أو الاستشارات أو التعاون؟ كلمني.', name: 'الاسم', email: 'البريد الإلكتروني', subject: 'الموضوع', message: 'الرسالة', send: 'إرسال', subjects: ['استفسار عن دورة', 'تدريب مؤسسي', 'استشارات', 'تعاون', 'أخرى'] },
-    footer: { copy: '© ٢٠٢٦ كيمز. جميع الحقوق محفوظة.', credit: 'تصميم مستوحى من Colorlib' }
+    contact: { heading: 'تواصل معي', big: 'تواصل', desc: 'مهتم بالتدريب أو الاستشارات أو التعاون؟ كلمني.', name: 'الاسم', email: 'البريد الإلكتروني', org: 'المؤسسة أو الجامعة', subject: 'نوع الاستفسار', message: 'الرسالة', send: 'إرسال', name_label: 'الاسم', email_label: 'البريد الإلكتروني', org_label: 'المؤسسة / الجامعة (اختياري)', subject_label: 'نوع الاستفسار', message_label: 'الرسالة', mailto_notice: 'إرسال هذا النموذج سيفتح تطبيق البريد الإلكتروني مع الرسالة جاهزة. الموقع لا يرسل أو يخزن الرسالة مباشرة.', subjects: ['محاضرة جامعية', 'ورشة عمل طلابية', 'تدريب مؤسسي', 'استشارات أتمتة ذكاء اصطناعي', 'برنامج أمن سيبراني', 'فرصة تحدث', 'تعاون إبداعي', 'أخرى'] },
+    footer: { copy: '© ٢٠٢٦ كيمز. جميع الحقوق محفوظة.', credit: 'تصميم مستوحى من Colorlib', disclaimer: 'الآراء والمحتوى في هذا الموقع شخصية ولا تمثل أو تشير إلى تأييد من أصحاب العمل الحاليين أو السابقين.' }
   }
 };
 
@@ -197,7 +197,8 @@ function initContactForm() {
     e.preventDefault();
     const fd = new FormData(form);
     const subject = fd.get('subject') || 'Website Inquiry';
-    const body = `Name: ${fd.get('name')}\nEmail: ${fd.get('email')}\n\n${fd.get('message')}`;
+    const org = fd.get('organisation') ? `\nOrganisation: ${fd.get('organisation')}` : '';
+    const body = `Name: ${fd.get('name')}\nEmail: ${fd.get('email')}${org}\n\n${fd.get('message')}`;
     window.location.href = `mailto:kkhidr@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 }
