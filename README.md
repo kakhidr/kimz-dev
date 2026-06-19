@@ -68,24 +68,23 @@ kimz-dev/
 │   └── clark.js               # Slider, i18n, animations, a11y (~13KB)
 ├── assets/
 │   └── img/
-│       ├── optimized/         # WebP + PNG (production-ready)
-│       │   ├── avatar-night.webp
-│       │   ├── avatar-warm.webp
-│       │   ├── avatar-vector.webp
-│       │   ├── hero-bg.webp
-│       │   └── banner-youtube.webp
-│       └── *.png              # Original high-res brand assets
-├── staticwebapp.config.json   # Azure SWA routing + security headers
-├── PROMPT.md                  # Build prompt for AI assistants
+│       └── optimized/         # WebP + PNG fallbacks (production-ready)
+│           ├── avatar-night.webp
+│           ├── avatar-warm.webp
+│           ├── avatar-vector.webp
+│           ├── hero-bg.webp
+│           └── banner-youtube.webp
+├── staticwebapp.config.json   # Azure SWA routing + security headers + 404 fallback
+├── .github/
+│   └── workflows/
+│       └── quality.yml        # CI: HTMLHint, ESLint, Stylelint, Lychee
+├── PROMPT.md                  # Versioned build prompt for AI assistants
 ├── CHANGELOG.md               # Version history
 └── README.md                  # This file
 ```
 
-### Legacy files (kept for reference)
-- `index-old.html` — Previous multi-page home
-- `clark.html` — Copy of index.html (original build name)
-- `courses.html`, `workshop.html`, `about.html`, `contact.html` — Old multi-page versions
-- `css/style.css`, `js/main.js` — Old multi-page assets
+> **Note:** Legacy files (old multi-page HTML, `css/style.css`, `js/main.js`) were removed in v2.1.
+> Git history retains them if needed for reference.
 
 ## Deployment
 

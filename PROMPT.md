@@ -1,6 +1,17 @@
 # Build Prompt — KiMZ.Dev Website
 
+> **Version:** 2.1 — 19 June 2026  
 > Use this prompt with an AI coding assistant (GitHub Copilot, Claude, ChatGPT, etc.) to recreate or extend this website.
+
+### Revision History
+
+| Version | Date | Changes |
+|---------|------|---------|
+| 2.1 | 2026-06-19 | Repo cleanup, inline handlers removed, hero dots as buttons, SVG hamburger, pause/play, GitHub Actions CI, SWA 404 fix, placeholder policy added |
+| 2.0 | 2026-06-19 | Audience pathways, credibility section, accessibility (skip link, focus-visible, reduced-motion, progressive enhancement), SEO platform files, bilingual expansion, contact form expansion |
+| 1.2 | 2026-06-18 | README + PROMPT documentation added |
+| 1.1 | 2026-06-18 | Optimized images, hero backgrounds |
+| 1.0 | 2026-06-17 | Initial Clark single-page build |
 
 ---
 
@@ -103,23 +114,28 @@ Build me a single-page portfolio and training website with the following specifi
 
 ### Bilingual (i18n) System
 
-- Language toggle button in navbar
+- Language toggle button in navbar (no inline handlers — `addEventListener` only)
 - Stores preference in `localStorage` key `kimz-lang`
 - All translatable elements have `data-i18n="section.key"` attributes
 - Full EN and AR translation objects in JavaScript
-- AR mode: sets `dir="rtl"` on body, switches font to Cairo
-- Translations cover: navbar, hero slides, pathways, about, resume, courses, credibility, skills, projects, blog, contact, footer (including disclaimer)
+- AR mode: sets `document.documentElement.lang` and `document.documentElement.dir`
+- Dropdown options translated on language switch
+- Translations cover: navbar, hero slides, slider labels, pathways, about, resume, courses, credibility, skills, projects, blog, contact, footer (including disclaimer)
 
-### Accessibility (WCAG 2.1 AA)
+### Accessibility (WCAG 2.1/2.2 AA principles)
 
-- **Skip-to-content** link (visually hidden, visible on focus)
+- **Skip-to-content** link targets `<main id="main-content">`
 - **`:focus-visible`** outlines on all interactive elements (2px amber)
 - **`prefers-reduced-motion`** disables all transitions/animations AND stops hero auto-rotation
 - **Progressive enhancement** — `.js` class on `<html>`, animations only apply when JS loads
-- **ARIA** — Mobile nav has `aria-expanded`, `aria-controls`, `aria-hidden`; Escape key closes nav
-- **Hero slider** pauses on `mouseenter`/`focusin`, resumes on leave (only if motion not reduced)
+- **No inline event handlers** — all interactions via `addEventListener` in `clark.js`
+- **Mobile nav** — SVG hamburger/close icons, `aria-expanded`, `aria-controls`, `aria-hidden`; Escape closes nav and returns focus
+- **Hero dots** — `<button type="button">` with `data-slide-index`, `aria-label`, `aria-current`
+- **Pause/play button** — `aria-pressed`, stops slider permanently after user interaction
+- **Inactive slides** — `visibility: hidden`, `pointer-events: none`, `aria-hidden="true"`, links removed from tab order
+- **Hero slider** pauses on `mouseenter`/`focusin`, resumes on leave (only if not manually paused)
 - **Visible labels** on all form inputs
-- **Semantic HTML** — landmark regions, headings hierarchy, lists
+- **Semantic HTML** — `<main>`, `<nav>`, `<section>`, `<footer>` landmark regions
 
 ### SEO & Platform Files
 

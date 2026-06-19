@@ -6,6 +6,34 @@ Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ---
 
+## [2.1.0] — 2026-06-19
+
+### Added
+- **GitHub Actions CI** — `.github/workflows/quality.yml` (HTMLHint, ESLint, Stylelint, Lychee link check)
+- **Pause/play button** for hero slider with `aria-pressed` and SVG icons
+- **Pathway preselection** — clicking pathway CTAs preselects the matching enquiry type in the contact form via `data-enquiry`
+- **Build marker** — `<meta name="kimz-build" content="v2-maintenance">` for deployment verification
+- **`<main id="main-content">`** wrapping all page content
+- `fetchpriority="high"` on first hero image
+
+### Changed
+- **Hero dots** — `<div onclick>` replaced with `<button type="button" data-slide-index aria-label aria-current>`
+- **Mobile hamburger** — Unicode `☰` replaced with inline SVG menu/close icons
+- **Inline handlers removed** — all `onclick=` attributes replaced with `addEventListener` in JS
+- **clark.js refactored** — reorganised into 11 named sections (435 lines), guards for missing elements, sanitised mailto, translated dropdown options
+- **Inactive hero slides** — now use `visibility: hidden`, `pointer-events: none`, `aria-hidden="true"`, links removed from tab order
+- **Slider pause behaviour** — stops permanently after user clicks a dot (until Play pressed)
+- **SWA config** — fallback rewrites to `/404.html` (not `/index.html`) so unknown routes show custom 404
+- **Skip link** — now targets `<main id="main-content">` (was `#about`)
+- **PROMPT.md** — versioned with revision history table
+- **README.md** — public repo noted, content governance section, owner validation, corrected file tree
+
+### Removed
+- 14 legacy files: `index-old.html`, `clark.html`, `about.html`, `courses.html`, `contact.html`, `workshop.html`, `css/style.css`, `js/main.js`, 6 original source PNGs
+- All inline `onclick` event handlers from HTML
+
+---
+
 ## [2.0.0] — 2026-06-19
 
 ### Added
