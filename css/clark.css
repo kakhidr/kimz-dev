@@ -1,9 +1,8 @@
 /* ═══════════════════════════════════════════════════════════════
    kimz.dev — Clark-Inspired Single-Page Site
    Brand: Warshet KiMZ · Amber #D89D2A · Charcoal #1A1A1A
+   Fonts loaded via <link> in HTML head (Poppins + Cairo)
    ═══════════════════════════════════════════════════════════════ */
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Cairo:wght@400;600;700;800&display=swap');
 
 :root {
   --gold: #D89D2A;
@@ -29,6 +28,52 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+
+/* ═══ ACCESSIBILITY ═══ */
+.skip-link {
+  position: absolute; top: -100%; left: 16px;
+  background: var(--gold); color: var(--bg); padding: 8px 16px;
+  border-radius: 4px; font-size: 14px; font-weight: 500;
+  z-index: 9999; transition: top 0.2s;
+}
+.skip-link:focus { top: 8px; }
+
+:focus-visible {
+  outline: 3px solid var(--gold-bright);
+  outline-offset: 3px;
+}
+
+/* Progressive enhancement: show content by default, hide only when JS is available */
+.animate, .animate-left, .animate-right {
+  opacity: 1; transform: none;
+}
+.js .animate {
+  opacity: 0; transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js .animate-left {
+  opacity: 0; transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js .animate-right {
+  opacity: 0; transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.js .animate.visible, .js .animate-left.visible, .js .animate-right.visible {
+  opacity: 1; transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js .animate, .js .animate-left, .js .animate-right {
+    opacity: 1; transform: none;
+  }
+}
 
 body {
   font-family: var(--font-en);

@@ -15,7 +15,9 @@ const translations = {
     about: { heading: 'About Me', big: 'About', bio1: "I'm <strong>Karim Khidr</strong> — most people know me as <strong style='color:var(--gold)'>KiMZ</strong>. I'm a Senior Service Engineer at Microsoft with over 20 years of experience in technology, cloud operations, cybersecurity, and automation.", bio2: "I hold a <strong style='color:var(--gold)'>First Class Honours MSc in Cybersecurity</strong> (overall result: 82%) and have designed AI-assisted workflows that reduced repetitive manual triage and coordination effort by approximately 60–70% within the target process. I started my career as a university instructor — and that passion for teaching never left.", counter_label: 'Years in Tech', btn: 'Contact Me' },
     resume: { heading: 'Resume', big: 'Resume', desc: 'A career spanning university teaching, global telecom operations, and enterprise cloud engineering.' },
     courses: { heading: 'Courses', big: 'Courses', desc: 'Hands-on training built from real-world production experience' },
-    skills: { heading: 'My Skills', big: 'Skills', desc: 'Core competencies developed across 20+ years of engineering and operations' },
+    pathways: { students_title: 'Students & Junior Professionals', students_desc: 'Career-focused sessions, practical cybersecurity foundations and responsible use of AI as a learning assistant.', students_cta: 'Explore Student Training', universities_title: 'Universities', universities_desc: 'Guest lectures, 90-minute intensive sessions and applied programmes designed for computer science and cybersecurity students.', universities_cta: 'Request a University Session', orgs_title: 'Organisations', orgs_desc: 'Practical training and advisory sessions covering AI workflows, cybersecurity, cloud operations and technical service practices.', orgs_cta: 'Discuss Corporate Training' },
+    credibility: { heading: 'Why Learn With Karim', big: 'Why', exp_title: 'Enterprise Experience', exp_desc: 'More than 20 years across support, service delivery, customer success, incident management, cloud operations and senior engineering.', teach_title: 'Teaching & Mentoring', teach_desc: 'University teaching, professional training design and applied student research mentoring.', research_title: 'Applied Cybersecurity Research', research_desc: 'First-class MSc research focused on adversarial machine learning, intrusion detection and explainable AI.', ai_title: 'Practical AI Workflows', ai_desc: 'Experience designing human-supervised workflows for summarisation, triage, routing, knowledge management and operational follow-through.' },
+    skills: { heading: 'Capabilities', big: 'Skills', desc: 'Core competencies developed across 20+ years of engineering and operations' },
     projects: { heading: 'Projects & Workshop', big: 'Projects', desc: 'Course previews, YouTube content, and experiments from Warshet KiMZ' },
     blog: { heading: 'Blog', big: 'Blog', desc: 'Thoughts on AI, security, automation, and the learning journey' },
     contact: { heading: 'Contact', big: 'Contact', desc: "Interested in training, consulting, or collaboration? Let's talk.", name: 'Your Name', email: 'Your Email', org: 'Organisation or University', subject: 'Enquiry Type', message: 'Message', send: 'Send Message', name_label: 'Name', email_label: 'Email', org_label: 'Organisation / University (optional)', subject_label: 'Enquiry Type', message_label: 'Message', mailto_notice: 'Submitting this form will open your email application with the message prepared. The website does not send or store the message directly.', subjects: ['University Guest Lecture', 'Student Workshop', 'Corporate Training', 'AI Automation Advisory', 'Cybersecurity Programme', 'Speaking Opportunity', 'Creator Collaboration', 'Other'] },
@@ -31,7 +33,9 @@ const translations = {
     about: { heading: 'عني', big: 'عني', bio1: "أنا <strong>كريم خضر</strong> — معظم الناس يعرفوني بـ <strong style='color:var(--gold)'>كيمز</strong>. مهندس أول في مايكروسوفت وعندي أكتر من ٢٠ سنة خبرة في التكنولوجيا، العمليات السحابية، الأمن السيبراني، والأتمتة.", bio2: "حاصل على <strong style='color:var(--gold)'>ماجستير أمن سيبراني بمرتبة الشرف الأولى</strong> (النتيجة الكلية: ٨٢٪) وصممت أنظمة مساعدة بالذكاء الاصطناعي قللت العمل اليدوي المتكرر في الفرز والتنسيق بنسبة ٦٠-٧٠٪ تقريباً. بدأت مسيرتي كمدرس جامعي — وشغف التعليم ما سابني أبداً.", counter_label: 'سنة خبرة', btn: 'تواصل معي' },
     resume: { heading: 'السيرة الذاتية', big: 'السيرة', desc: 'مسيرة مهنية تمتد من التدريس الجامعي إلى عمليات الاتصالات العالمية وهندسة السحابة.' },
     courses: { heading: 'الدورات', big: 'الدورات', desc: 'تدريب عملي مبني على خبرة حقيقية في بيئات الإنتاج' },
-    skills: { heading: 'مهاراتي', big: 'المهارات', desc: 'كفاءات أساسية مبنية على أكتر من ٢٠ سنة في الهندسة والعمليات' },
+    pathways: { students_title: 'الطلاب والمهنيون المبتدئون', students_desc: 'جلسات تركز على المسار المهني، أساسيات الأمن السيبراني العملية، والاستخدام المسؤول للذكاء الاصطناعي كمساعد تعليمي.', students_cta: 'استكشف تدريب الطلاب', universities_title: 'الجامعات', universities_desc: 'محاضرات ضيف، جلسات مكثفة ٩٠ دقيقة، وبرامج تطبيقية مصممة لطلاب علوم الحاسب والأمن السيبراني.', universities_cta: 'اطلب جلسة جامعية', orgs_title: 'المؤسسات', orgs_desc: 'تدريب عملي وجلسات استشارية تغطي أنظمة الذكاء الاصطناعي، الأمن السيبراني، العمليات السحابية والممارسات التقنية.', orgs_cta: 'ناقش التدريب المؤسسي' },
+    credibility: { heading: 'لماذا تتعلم مع كريم', big: 'لماذا', exp_title: 'خبرة مؤسسية', exp_desc: 'أكثر من ٢٠ سنة في الدعم التقني، تقديم الخدمات، نجاح العملاء، إدارة الحوادث، العمليات السحابية والهندسة.', teach_title: 'التدريس والإرشاد', teach_desc: 'تدريس جامعي، تصميم برامج تدريبية، وإرشاد بحثي تطبيقي للطلاب.', research_title: 'بحث أمن سيبراني تطبيقي', research_desc: 'بحث ماجستير بمرتبة الشرف الأولى يركز على التعلم الآلي العدائي، كشف التسلل والذكاء الاصطناعي القابل للتفسير.', ai_title: 'أنظمة ذكاء اصطناعي عملية', ai_desc: 'خبرة في تصميم أنظمة عمل بإشراف بشري للتلخيص، الفرز، التوجيه، إدارة المعرفة والمتابعة التشغيلية.' },
+    skills: { heading: 'القدرات', big: 'المهارات', desc: 'كفاءات أساسية مبنية على أكتر من ٢٠ سنة في الهندسة والعمليات' },
     projects: { heading: 'المشاريع والورشة', big: 'المشاريع', desc: 'معاينات الدورات، محتوى يوتيوب، وتجارب من ورشة كيمز' },
     blog: { heading: 'المدونة', big: 'المدونة', desc: 'أفكار عن الذكاء الاصطناعي، الأمان، الأتمتة، ورحلة التعلّم' },
     contact: { heading: 'تواصل معي', big: 'تواصل', desc: 'مهتم بالتدريب أو الاستشارات أو التعاون؟ كلمني.', name: 'الاسم', email: 'البريد الإلكتروني', org: 'المؤسسة أو الجامعة', subject: 'نوع الاستفسار', message: 'الرسالة', send: 'إرسال', name_label: 'الاسم', email_label: 'البريد الإلكتروني', org_label: 'المؤسسة / الجامعة (اختياري)', subject_label: 'نوع الاستفسار', message_label: 'الرسالة', mailto_notice: 'إرسال هذا النموذج سيفتح تطبيق البريد الإلكتروني مع الرسالة جاهزة. الموقع لا يرسل أو يخزن الرسالة مباشرة.', subjects: ['محاضرة جامعية', 'ورشة عمل طلابية', 'تدريب مؤسسي', 'استشارات أتمتة ذكاء اصطناعي', 'برنامج أمن سيبراني', 'فرصة تحدث', 'تعاون إبداعي', 'أخرى'] },
@@ -136,8 +140,26 @@ function initNavbar() {
 
 // ─── Mobile Nav ───
 function toggleMobileNav() {
-  document.querySelector('.nav-menu').classList.toggle('open');
+  const menu = document.querySelector('.nav-menu');
+  const toggle = document.querySelector('.nav-toggle');
+  const isOpen = menu.classList.toggle('open');
+  toggle.setAttribute('aria-expanded', isOpen);
+  menu.setAttribute('aria-hidden', !isOpen);
 }
+
+// Close mobile nav on Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const menu = document.querySelector('.nav-menu');
+    const toggle = document.querySelector('.nav-toggle');
+    if (menu && menu.classList.contains('open')) {
+      menu.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      menu.setAttribute('aria-hidden', 'true');
+      toggle.focus();
+    }
+  }
+});
 
 // ─── Scroll Animations ───
 function initAnimations() {
@@ -217,6 +239,10 @@ function initSmoothScroll() {
 
 // ─── Init ───
 document.addEventListener('DOMContentLoaded', () => {
+  document.documentElement.classList.add('js');
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
   setLanguage(currentLang);
   initNavbar();
   initSmoothScroll();
@@ -225,5 +251,17 @@ document.addEventListener('DOMContentLoaded', () => {
   initCounters();
   initContactForm();
   goToSlide(0);
-  startSlider();
+
+  if (!prefersReducedMotion) {
+    startSlider();
+  }
+
+  // Pause slider on interaction
+  const heroSection = document.querySelector('.hero');
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', () => clearInterval(slideInterval));
+    heroSection.addEventListener('mouseleave', () => { if (!prefersReducedMotion) startSlider(); });
+    heroSection.addEventListener('focusin', () => clearInterval(slideInterval));
+    heroSection.addEventListener('focusout', () => { if (!prefersReducedMotion) startSlider(); });
+  }
 });
