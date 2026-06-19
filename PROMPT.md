@@ -25,30 +25,42 @@ Build me a single-page portfolio and training website with the following specifi
   - Secondary surfaces: `#242424`, `#333333`
   - Accent dim: `#b8860b`
   - Accent bright: `#f0b840`
-- **Fonts:** Poppins (English), Cairo (Arabic)
+- **Fonts:** Poppins (English), Cairo (Arabic) — loaded via `<link>` in `<head>`, NOT `@import`
 - **Style:** Premium, minimal, cinematic, dark theme, creator-focused
 - **Icons:** Custom inline SVG only — no emoji, no icon fonts
 - **No frameworks:** Pure HTML/CSS/JS, zero dependencies
 
 ### Sections (single-page, scroll-based navigation)
 
-1. **Navbar** — Fixed, transparent → solid on scroll. Brand "KiMZ.Dev" top-left. Scroll spy highlights active section. Language toggle button (EN/AR). Mobile hamburger menu.
+1. **Navbar** — Fixed, transparent → solid on scroll. Brand "KiMZ.Dev" top-left. Scroll spy highlights active section. Language toggle button (EN/AR). Mobile hamburger menu with ARIA attributes (`aria-expanded`, `aria-controls`, `aria-hidden`), Escape key to close.
 
 2. **Hero Slider** — Fullscreen, 3 slides auto-rotating every 5 seconds with dot navigation:
    - Slide 1: Personal intro — "I'm Karim Khidr", AI & Cybersecurity Trainer, avatar image, CTA buttons
    - Slide 2: Training value prop — "Learn. Build. Secure.", experience highlight
    - Slide 3: YouTube channel — "The Workshop" (ورشة كيمز), subscribe CTA
    - Each slide supports a background image with dark overlay
+   - Pauses on hover/focus, respects `prefers-reduced-motion`
 
-3. **About** — Two-column: profile photo (left) + bio text with info list (right). Animated counter ("20+ Years in Tech"). Contact Me button.
+3. **Audience Pathways** — 3-card grid entry points:
+   - Students & Self-Learners → free YouTube content
+   - Universities & Colleges → guest lectures, workshop modules
+   - Organisations & Teams → custom corporate training
+   - Each card: SVG icon, heading, short description, CTA link
 
-4. **Resume** — Career timeline (balanced two-column layout):
+4. **About** — Two-column: profile photo (left) + bio text with info list (right). Animated counter ("20+ Years in Tech"). Contact Me button.
+
+5. **Resume** — Career timeline (balanced two-column layout):
    - Left column: Career roles with dates, titles, companies, descriptions
    - Right column: Education, advisory, brand work
-   - Include: Microsoft Senior Service Engineer (2024–present), Service Engineer II (2020–2024), Service Engineer (2017–2020), Orange Business Services roles (2007–2017), Alexandria University instructor (2005–2007)
-   - Education: MSc Cybersecurity First Class Honours (GPA 82, Dissertation 91), BEng Electronics & Communications
+   - **Three distinct Microsoft roles:**
+     - Senior Service Engineer (2024–present)
+     - Service Engineer II (2020–2024)
+     - Service Engineer (2017–2020)
+   - Prior: Orange Business Services (2007–2017), Alexandria University (2005–2007)
+   - Education: MSc Cybersecurity First Class Honours (overall result: 82%, Dissertation 91%), BEng Electronics & Communications
+   - **No "GPA 82"** — use "overall result: 82%"
 
-5. **Courses** — 6 service cards in a 3×2 grid:
+6. **Courses** — 6 service cards in a 3×2 grid:
    - AI Automation & Workflows
    - Cybersecurity Fundamentals
    - AI in Security Operations
@@ -57,25 +69,37 @@ Build me a single-page portfolio and training website with the following specifi
    - 1:1 Consulting & Advisory
    - Each card: SVG icon, title, description
 
-6. **Skills** — Animated progress bars that fill on scroll:
-   - AI & Automation (92%), Cybersecurity (88%), Cloud & Azure (85%), Incident Management (90%), Leadership (82%), Technical Writing (78%)
+7. **Credibility ("Why Learn With Karim")** — 4-card grid:
+   - Real-World Engineering (20+ years production, not classroom-only)
+   - Proven Research (MSc First Class, published dissertation)
+   - Bilingual Delivery (EN + AR, cultural bridge)
+   - Active Practitioner (still engineering daily, current tooling)
 
-7. **Projects** — 6 cards in a 3×2 grid:
+8. **Skills** — Evidence-based skill labels (NOT percentage bars):
+   - AI & Automation → "Advanced" (daily production use)
+   - Cybersecurity → "Strong Applied" (MSc + enterprise ops)
+   - Cloud & Azure → "Advanced" (7+ years Azure)
+   - Incident Management → "Advanced" (enterprise-scale)
+   - Leadership → "Strong Applied" (team lead + training)
+   - Technical Writing → "Research & Applied" (MSc dissertation + docs)
+
+9. **Projects** — 6 cards in a 3×2 grid:
    - AI Incident Triage, MSc Dissertation, Warshet KiMZ, Security Automation, Cloud Monitoring, Knowledge Management
    - Each card: SVG icon, title, description
+   - (Placeholder — detailed project pages pending user content)
 
-8. **Blog** — 3 preview cards linking to `blog.html`:
-   - "AI Workflows That Replaced 70% of Manual Work"
-   - "MSc Cybersecurity Journey"
-   - "AI Copilots in Security: Hype vs. Reality"
-   - Each card: SVG icon, meta (date + tags), title, excerpt
+10. **Blog** — 3 preview cards linking to `blog.html`:
+    - Each card: SVG icon, meta (date + tags), title, excerpt
+    - (Content pending — no fabricated articles)
 
-9. **Contact** — Two-column: info list (left) + form (right)
-   - Info: Location (Dublin), Email, LinkedIn, YouTube
-   - Form: Name, Email, Subject dropdown, Message, Submit button
-   - Form uses mailto handler (no backend required)
+11. **Contact** — Two-column: info list (left) + form (right)
+    - Info: Location (Dublin), Email, LinkedIn, YouTube
+    - Form: Name, Organisation, Email, Enquiry Type dropdown (8 categories), Message, Submit
+    - Enquiry types: General, Training for Myself, University/College Partnership, Corporate Team Training, Guest Lecture, Consulting/Advisory, Content/Media Collaboration, Other
+    - Form uses mailto handler (no backend required)
+    - Visible `<label>` elements above every input
 
-10. **Footer** — Brand "KiMZ.Dev", Arabic tagline, social SVG icons (YouTube, Instagram, LinkedIn, Email), copyright, Colorlib credit
+12. **Footer** — Brand "KiMZ.Dev", Arabic tagline, social SVG icons (YouTube, Instagram, LinkedIn, Email), copyright, Colorlib credit, privacy link, employer disclaimer
 
 ### Bilingual (i18n) System
 
@@ -84,15 +108,39 @@ Build me a single-page portfolio and training website with the following specifi
 - All translatable elements have `data-i18n="section.key"` attributes
 - Full EN and AR translation objects in JavaScript
 - AR mode: sets `dir="rtl"` on body, switches font to Cairo
-- Translations cover: navbar, hero slides, about, resume, courses, skills, projects, blog, contact, footer
+- Translations cover: navbar, hero slides, pathways, about, resume, courses, credibility, skills, projects, blog, contact, footer (including disclaimer)
+
+### Accessibility (WCAG 2.1 AA)
+
+- **Skip-to-content** link (visually hidden, visible on focus)
+- **`:focus-visible`** outlines on all interactive elements (2px amber)
+- **`prefers-reduced-motion`** disables all transitions/animations AND stops hero auto-rotation
+- **Progressive enhancement** — `.js` class on `<html>`, animations only apply when JS loads
+- **ARIA** — Mobile nav has `aria-expanded`, `aria-controls`, `aria-hidden`; Escape key closes nav
+- **Hero slider** pauses on `mouseenter`/`focusin`, resumes on leave (only if motion not reduced)
+- **Visible labels** on all form inputs
+- **Semantic HTML** — landmark regions, headings hierarchy, lists
+
+### SEO & Platform Files
+
+- `robots.txt` — Allow all, reference sitemap
+- `sitemap.xml` — All public URLs (index, blog, privacy)
+- `site.webmanifest` — PWA-ready with brand colors and icons
+- `404.html` — Styled custom error page
+- `privacy.html` — Static privacy policy (no cookies, explains Google Fonts + Azure hosting)
+- `staticwebapp.config.json` — Security headers + 404 override
+- Structured data (JSON-LD `ProfessionalService`) in `<head>`
+- Open Graph + Twitter Card meta tags
+- Canonical URLs on all pages
+- `<meta name="theme-color" content="#D89D2A">`
 
 ### Animations & Interactions
 
 - **Scroll spy:** Highlights active nav link based on scroll position
 - **Navbar shrink:** Reduces padding and adds background on scroll
-- **Hero slider:** Auto-rotate with fade transitions, clickable dots
-- **Scroll animations:** Elements with `.animate` class fade in + slide up when entering viewport (IntersectionObserver)
-- **Skill bars:** Fill to target width when scrolled into view
+- **Hero slider:** Auto-rotate with fade transitions, clickable dots, pause on interaction
+- **Scroll animations:** Elements with `.animate` class fade in + slide up when entering viewport (IntersectionObserver), only when JS loaded (`.js` class present)
+- **Skill labels:** Fade in on scroll (no percentage fill animations)
 - **Counter:** Animates from 0 to target number on scroll
 - **Section headings:** Large background text (`.big-text`) behind section title, `user-select: none`
 
@@ -103,8 +151,8 @@ Build me a single-page portfolio and training website with the following specifi
 - Section heading with big-text background
 - Blog cards with SVG icons (same style as main page)
 - 4 articles (Coming Soon placeholders)
-- Subscribe CTA box with SVG icon
-- Same footer
+- Subscribe CTA replaced with "Follow on LinkedIn / Subscribe on YouTube" links
+- Same footer with disclaimer
 
 ### Favicon
 
@@ -118,33 +166,42 @@ Build me a single-page portfolio and training website with the following specifi
 - Hero background: 1920×1080 max, ~60KB WebP
 - Banner: 1200×400 max, ~44KB WebP
 - Use `loading="lazy"` on non-critical images
+- Explicit `width` and `height` attributes on all `<img>` tags (prevents CLS)
 
 ### Hosting & Deployment
 
 - Azure Static Web Apps (Free tier)
 - No build step — `--skipAppBuild true`
-- `staticwebapp.config.json` for routing (navigationFallback to index.html)
+- `staticwebapp.config.json` for routing, security headers, and custom 404
 - Also works on any static host: GitHub Pages, Netlify, Vercel
 
 ### Content Rules
 
 - No internal/confidential company references
 - No emoji as icons (use SVG)
+- No fabricated content — use placeholders where user hasn't provided material
+- Employer disclaimer in footer: "Views expressed are personal..."
 - Keep accessibility: alt tags, aria-labels, semantic HTML
 - Responsive: mobile-first with breakpoints at 768px, 992px, 1200px
 - Colorlib attribution required in footer (CC BY 3.0)
+- All external links must have `rel="noopener noreferrer"`
 
 ---
 
 ## File Output Expected
 
 ```
-index.html          (~25KB) — Main single-page site
-blog.html           (~5KB)  — Standalone blog page
-css/clark.css       (~18KB) — Complete design system
-js/clark.js         (~11KB) — All interactions and i18n
-favicon.svg         (<1KB)  — SVG favicon
-staticwebapp.config.json — Azure SWA config
+index.html                  (~30KB) — Main single-page site
+blog.html                   (~6KB)  — Standalone blog page
+privacy.html                (~3KB)  — Privacy policy
+404.html                    (~2KB)  — Custom error page
+css/clark.css               (~20KB) — Complete design system
+js/clark.js                 (~13KB) — All interactions, i18n, and a11y
+favicon.svg                 (<1KB)  — SVG favicon
+robots.txt                  (<1KB)  — Crawl directives
+sitemap.xml                 (<1KB)  — XML sitemap
+site.webmanifest            (<1KB)  — PWA manifest
+staticwebapp.config.json    (<1KB)  — Azure SWA config + security headers
 ```
 
 ## Social Links
